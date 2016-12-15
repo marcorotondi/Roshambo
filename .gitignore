@@ -10,3 +10,40 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# Spring Plugins
+.springBeans
+
+# Intellij
+*.iml
+*.iws
+*.ipr
+.idea/
+.gradle/
+local.properties
+*/build/
+*~
+*.swp
+
+#NDK
+obj/
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target
+
+# Windows thumbnail db
+Thumbs.db
+
+# Other
+*.db.*
+classes/
