@@ -74,6 +74,21 @@ public class RoshamboUtils {
 		return games;
 	}
 
+	public static int getNumberOfPlayer(Console console) {
+		System.out.println("Please select number of Player: 1 = One Player, 2 = Two Player");
+		final String readLineNumberOfPlayer = console.readLine();
+		if (StringUtils.isBlank(readLineNumberOfPlayer)) {
+			throw new IllegalArgumentException("Empty Value for Number of Player enter.");
+		}
+
+		final int playersNumber = NumberUtils.toInt(readLineNumberOfPlayer);
+		if (0 == playersNumber) {
+			throw new IllegalArgumentException("Invalid Value for Number of Player enter.");
+		}
+
+		return playersNumber;
+	}
+
 	public static void printResult(final int runPlay, final Player playerOne, final Player playerTwo, final GameResult gameResult) {
 		System.out.println("");
 		System.out.printf("Run\t\t%s\t\t%s\n", playerOne.playerName(), playerTwo.playerName());
